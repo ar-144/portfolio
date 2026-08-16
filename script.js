@@ -89,9 +89,11 @@ $$('[data-close]').forEach(el => el.addEventListener('click', closeModal));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 const certData = {
-  excel: ['CERTIFICATION', 'Getting Started with Microsoft Excel', 'A certificate listed on the provided LinkedIn profile. Add the credential URL or certificate image when you publish the site.', ['Microsoft Excel', 'Productivity']],
-  python: ['CERTIFICATION', 'Python Basics', 'A certificate listed on the provided LinkedIn profile. Add the credential URL or certificate image when you publish the site.', ['Python', 'Programming']],
-  agile: ['CERTIFICATION', 'Agile Project Management', 'A certificate listed on the provided LinkedIn profile. Add the credential URL or certificate image when you publish the site.', ['Agile', 'Project Management']]
+  excel: ['CERTIFICATION', 'Getting Started with Microsoft Excel', 'Certification listed on the latest LinkedIn profile PDF.', ['Microsoft Excel', 'Productivity']],
+  ai: ['CERTIFICATION', 'AI For Beginners', 'Certification listed on the latest LinkedIn profile PDF.', ['Artificial Intelligence', 'AI']],
+  python: ['CERTIFICATION', 'Python Basics', 'Certification listed on the latest LinkedIn profile PDF.', ['Python', 'Programming']],
+  datascience: ['CERTIFICATION', 'Data Science & Analytics', 'Certification listed on the latest LinkedIn profile PDF.', ['Data Science', 'Analytics']],
+  agile: ['CERTIFICATION', 'Agile Project Management', 'Certification listed on the latest LinkedIn profile PDF.', ['Agile', 'Project Management']]
 };
 $$('.cert-card').forEach(card => card.addEventListener('click', () => {
   const [kicker, title, text, tags] = certData[card.dataset.cert];
